@@ -24,7 +24,7 @@ class MovieDetailView(DetailView):
 class AddReview(View):
     """отызвы"""
     def post(self, request, pk):
-        print(request.POST)
+        # print(request.POST)
         form = ReviewsForm(request.POST)
         # print(form)
         movie = Movie.objects.get(id=pk)
